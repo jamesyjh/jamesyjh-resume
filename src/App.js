@@ -1,10 +1,15 @@
 import React from "react";
+import Layout from "./components/layout/Layout";
+import About from "./sections/about/About";
+import "./App.css";
 
 const App = () => {
     return (
-        <div>
-            <h1>My Resume 2021</h1>
-        </div>
+        <>
+            <Layout>
+                <About />
+            </Layout>
+        </>
     );
 };
 
