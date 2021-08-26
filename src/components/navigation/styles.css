@@ -1,3 +1,7 @@
+.bg-dark {
+    background-color: rgba(0, 0, 0, 1) !important;
+}
+
 #sideNav {
     padding-left: 1rem;
     padding-right: 1rem;
