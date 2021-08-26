@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <div>
-                {/* <Navigation /> */}
+                <Navigation />
                 {children}
             </div>
         </>

@@ -41,6 +41,12 @@ const StyledButton = styled.button`
 `;
 
 const StyledSocialLink = styled.a`
+    background: transparent;
+`;
+
+const StyledMotionButton = styled(motion.button)`
+    background: transparent;
+    border: none;
     padding: 8px;
     border-radius: 50px;
     box-shadow: none;
@@ -49,8 +55,6 @@ const StyledSocialLink = styled.a`
         box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 10px 0px;
     }
 `;
-
-const StyledResumeLink = styled.a``;
 
 const Hero = () => {
     return (
@@ -70,7 +74,6 @@ const Hero = () => {
                 >
                     James&nbsp;Hong
                 </h1>
-
                 {/* <div className=" mb-5">
                     Toronto, ON · (437) 984-7589 ·<a href="mailto:name@email.com">jamesyjhong@gmail.com</a>
                 </div> */}
@@ -80,20 +83,27 @@ const Hero = () => {
                 </p>
 
                 <div className="d-flex justify-content-around" style={{ margin: 50 }}>
-                    <StyledSocialLink className="social-icon" href="#!">
-                        <img src={LinkedinIcon} alt="linkedin" className="img-fluid" />
-                    </StyledSocialLink>
-                    <StyledSocialLink className="social-icon" href="#!">
-                        <img src={GithubIcon} alt="github" />
-                    </StyledSocialLink>
+                    <StyledMotionButton whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}>
+                        <StyledSocialLink className="social-icon" href="#!">
+                            <img src={LinkedinIcon} alt="linkedin" className="img-fluid" />
+                        </StyledSocialLink>
+                    </StyledMotionButton>
 
-                    <StyledSocialLink className="social-icon" href="#!">
-                        <img src={EmailIcon} alt="email" />
-                    </StyledSocialLink>
+                    <StyledMotionButton whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}>
+                        <StyledSocialLink className="social-icon" href="#!">
+                            <img src={GithubIcon} alt="github" />
+                        </StyledSocialLink>
+                    </StyledMotionButton>
+
+                    <StyledMotionButton whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}>
+                        <StyledSocialLink className="social-icon" href="#!">
+                            <img src={EmailIcon} alt="email" />
+                        </StyledSocialLink>
+                    </StyledMotionButton>
 
                     <a className="social-icon" href="#!">
                         <motion.button
-                            whileHover={{ scale: 1.1 }}
+                            whileHover={{ scale: 1.15 }}
                             whileTap={{ scale: 0.9 }}
                             style={{
                                 background: "transparent",
