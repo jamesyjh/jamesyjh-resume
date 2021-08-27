@@ -1,0 +1,7 @@
+.simplebar-scrollbar::before {
+    background: #797979 !important;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+    opacity: 0.7;
+}

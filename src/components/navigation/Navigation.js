@@ -7,21 +7,26 @@ const Navigation = () => {
     // about, education, experience, skills, projects, contact
 
     const FloatingMenu = styled.nav`
-        font-family: sans-serif;
-        background: yellowgreen;
+        background: transparent;
+        border: 2px solid #fff;
         padding: 5px;
-        width: 130px;
+        width: 110px;
+        height: 300px;
         z-index: 100;
         position: fixed;
         bottom: 10vh;
         left: 10vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     `;
 
     const MenuLink = styled.a`
-        font-size: 0.9em;
-        display: block;
+        // font-size: 0.9em;
+        text-align: center;
         margin: 0 0.5em;
         color: white;
+        text-decoration: none;
     `;
 
     return (

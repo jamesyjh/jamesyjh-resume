@@ -1,16 +1,19 @@
 import React from "react";
-import Layout from "./components/layout/Layout";
+import SimplebarWrapper from "./components/layout/SimplebarWrapper";
 import About from "./sections/about/About";
 import Hero from "./sections/hero/Hero";
-// import "./App.css";
+import NavigationWrapper from "./components/layout/NavigationWrapper";
+import "simplebar/dist/simplebar.min.css";
 
 const App = () => {
     return (
         <>
-            <Layout>
+            <SimplebarWrapper>
                 <Hero />
-                <About />
-            </Layout>
+                <NavigationWrapper>
+                    <About />
+                </NavigationWrapper>
+            </SimplebarWrapper>
         </>
     );
 };
