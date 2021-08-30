@@ -1,6 +1,5 @@
 import React from "react";
 import "./styles.css";
-import profilePhoto from "../../assets/profile.jpg";
 import styled from "styled-components";
 
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
