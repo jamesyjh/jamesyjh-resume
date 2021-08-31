@@ -7,7 +7,7 @@
 		"start": "webpack serve",
 		"build": "webpack --env development",
 		"clean": "rmdir /Q /S dist",
-		"predeploy": "npm run build",
+		"predeploy": "npm run clean && npm run build",
 		"deploy": "npm run predeploy && gh-pages -d dist"
 	},
 	"repository": {
