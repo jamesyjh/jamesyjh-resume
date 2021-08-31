@@ -21,9 +21,9 @@ const plugins = [
 		// favicon: "src/assets/favicon.ico",
 	}),
 	new CleanWebpackPlugin(),
-	// new CopyPlugin({
-	//     patterns: [{ from: "src/robots.txt", to: "robots.txt" }],
-	// }),
+	new CopyPlugin({
+		patterns: [{ from: "CNAME", to: "CNAME" }],
+	}),
 ];
 
 console.log(`Running in ${process.env.NODE_ENV} environment`);
