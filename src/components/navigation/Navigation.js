@@ -45,14 +45,15 @@ const Navigation = () => {
 	return (
 		<>
 			<FloatingMenu>
-				<MenuLink href="#about">
+				<MenuLink href="#about" className="active">
 					<AccountCircleIcon />
 					&nbsp;&nbsp;About
 				</MenuLink>
-				<MenuLink href="#experience">
+				<MenuLink href="#work">
 					<WorkOutlineIcon /> &nbsp;&nbsp;Work
 				</MenuLink>
-				<MenuLink href="#skills">
+
+				<MenuLink href="#projects">
 					<CodeIcon /> &nbsp;&nbsp;Projects
 				</MenuLink>
 				<MenuLink href="#contact">

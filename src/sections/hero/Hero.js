@@ -59,6 +59,8 @@ const StyledMotionButton = styled(motion.button)`
 `;
 
 const Hero = () => {
+	const email = "jamesyj.hong@gmail.com";
+
 	return (
 		<StyledSection className="d-flex flex-column justify-content-center">
 			<StyledContent>
@@ -90,7 +92,12 @@ const Hero = () => {
 						whileHover={{ scale: 1.15 }}
 						whileTap={{ scale: 0.9 }}
 					>
-						<StyledSocialLink className="social-icon" href="#!">
+						<StyledSocialLink
+							className="social-icon"
+							href="https://www.linkedin.com/in/jamesyjh/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<img src={LinkedinIcon} alt="linkedin" className="img-fluid" />
 						</StyledSocialLink>
 					</StyledMotionButton>
@@ -99,7 +106,12 @@ const Hero = () => {
 						whileHover={{ scale: 1.15 }}
 						whileTap={{ scale: 0.9 }}
 					>
-						<StyledSocialLink className="social-icon" href="#!">
+						<StyledSocialLink
+							className="social-icon"
+							href="https://github.com/jamesyjh"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<img src={GithubIcon} alt="github" />
 						</StyledSocialLink>
 					</StyledMotionButton>
@@ -108,7 +120,7 @@ const Hero = () => {
 						whileHover={{ scale: 1.15 }}
 						whileTap={{ scale: 0.9 }}
 					>
-						<StyledSocialLink className="social-icon" href="#!">
+						<StyledSocialLink className="social-icon" href={`mailto:${email}`}>
 							<img src={EmailIcon} alt="email" />
 						</StyledSocialLink>
 					</StyledMotionButton>

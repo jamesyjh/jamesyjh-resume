@@ -1,14 +1,18 @@
 import React from "react";
-import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
-import SectionHeader from "../SectionHeader";
 import styled from "styled-components";
-import Timeline from "./Timeline";
-import StyledLineBreak from "../../components/StyledLineBreak";
+import CodeIcon from "@material-ui/icons/Code";
+import SectionHeader from "../SectionHeader";
 
-const Work = () => {
+const Projects = () => {
 	const StyledSection = styled.section`
 		min-height: 100vh;
 		padding: 0;
+		p {
+			max-width: 800px;
+			color: #fff;
+			line-height: 1.5em;
+		}
+
 		// background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)));
 		background-color: #2d3436;
 		background-image: linear-gradient(315deg, #191919 0%, #000000 74%);
@@ -24,16 +28,17 @@ const Work = () => {
 	return (
 		<StyledSection
 			className="d-flex flex-column justify-content-center"
-			id="work"
+			id="projects"
 		>
 			<StyledContent>
-				<SectionHeader icon={WorkOutlineIcon}>Work Experience</SectionHeader>
-				<div className="">
-					<Timeline />
-				</div>
+				<SectionHeader icon={CodeIcon}>My Creations</SectionHeader>
+				<br />
+				<p>
+					<strong>Coming soon...</strong>
+				</p>
 			</StyledContent>
 		</StyledSection>
 	);
 };
 
-export default Work;
+export default Projects;

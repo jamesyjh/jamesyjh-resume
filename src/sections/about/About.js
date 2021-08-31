@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SectionHeader from "../SectionHeader";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import profileImage from "../../assets/images/profile.jpg";
+import profileImage from "../../assets/images/profile2.jpg";
 import StyledLineBreak from "../../components/StyledLineBreak";
 
 const About = () => {
@@ -35,7 +35,10 @@ const About = () => {
 	`;
 
 	return (
-		<StyledSection className="d-flex flex-column justify-content-center">
+		<StyledSection
+			className="d-flex flex-column justify-content-center"
+			id="about"
+		>
 			<StyledContent>
 				<div className="row">
 					<div className="col-md-12 d-flex text-center">
@@ -47,6 +50,7 @@ const About = () => {
 								maxWidth: "15rem",
 								maxHeight: "15rem",
 								border: "0.5rem solid rgba(255, 255, 255, 0.2)",
+								filter: "saturate(0)",
 							}}
 						/>
 					</div>
