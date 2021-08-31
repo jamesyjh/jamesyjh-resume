@@ -37,7 +37,7 @@ module.exports = () => {
 			path: path.resolve(__dirname, "dist"),
 			filename: "index.bundle.js",
 			assetModuleFilename: "images/[hash][ext][query]",
-			publicPath: "/jamesyjh-resume/",
+			publicPath: "/",
 		},
 		devtool: "source-map",
 
