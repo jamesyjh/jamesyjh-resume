@@ -19,7 +19,7 @@
 	"bugs": {
 		"url": "https://github.com/jamesyjh/jamesyjh-resume/issues"
 	},
-	"homepage": "https://github.com/jamesyjh/jamesyjh-resume",
+	"homepage": "https://jamesyjh.github.io/jamesyjh-resume/",
 	"devDependencies": {
 		"@babel/core": "^7.15.0",
 		"@babel/plugin-syntax-dynamic-import": "^7.8.3",
