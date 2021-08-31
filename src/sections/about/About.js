@@ -16,7 +16,8 @@ const About = () => {
 		}
 
 		// background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)));
-		background: #000;
+		background-color: #2d3436;
+		background-image: linear-gradient(315deg, #191919 0%, #000000 74%);
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
@@ -36,7 +37,30 @@ const About = () => {
 	return (
 		<StyledSection className="d-flex flex-column justify-content-center">
 			<StyledContent>
-				<SectionHeader icon={AccountCircleIcon}>About Me</SectionHeader>
+				<div className="row">
+					<div className="col-md-12 d-flex text-center">
+						<img
+							className="img-fluid img-profile rounded-circle mx-auto mb-2"
+							src={profileImage}
+							alt="..."
+							style={{
+								maxWidth: "15rem",
+								maxHeight: "15rem",
+								border: "0.5rem solid rgba(255, 255, 255, 0.2)",
+							}}
+						/>
+					</div>
+				</div>
+				<div className="row">
+					<div className="col-md-6 d-flex flex-column justify-content-end">
+						<SectionHeader icon={AccountCircleIcon}>About Me</SectionHeader>
+					</div>
+					<div className="mt-2">
+						<p style={{ fontStyle: "italic" }}>
+							Constant learning. Constant Improvement
+						</p>
+					</div>
+				</div>
 				<div className="d-flex">
 					<div className="lead mt-5">
 						<p>
@@ -48,10 +72,11 @@ const About = () => {
 							My journey through technology started in 2017 when I sparked a
 							curiousity to try something for fun I hadn't done before - turn an
 							idea into a real web app. It was an incredibly fun - yet difficult
-							process. But what most compelled me (and still amazes me now) from
-							this initial encounter was the ocean of available technologies
-							built and being built by our worldwide community of incredible
-							engineers enabling us to help breathe life into our ideas.
+							process. But what most gripped me by this initial encounter (and
+							still amazes me to this day) was the ocean of available
+							technologies built and being built by our worldwide community of
+							incredible engineers enabling us to help breathe life into our
+							ideas.
 						</p>
 						<p>
 							I'm still learning and continually expanding my knowledge every

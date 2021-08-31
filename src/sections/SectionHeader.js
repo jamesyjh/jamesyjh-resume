@@ -37,7 +37,7 @@ const SectionHeader = ({ children, icon }) => {
 			bottom: 2px;
 			height: 1px;
 			width: 100%;
-			max-width: 255px;
+			max-width: 100%;
 			background-color: #fff;
 		}
 	`;

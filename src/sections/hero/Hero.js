@@ -19,6 +19,7 @@ const StyledSection = styled.section`
 
 	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
 		url(${bgImage});
+	filter: grayscale(100%);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
