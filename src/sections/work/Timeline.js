@@ -5,12 +5,12 @@ import abliminalLogo from "../../assets/images/abliminal.svg";
 import eyridLogo from "../../assets/images/eyrid.svg";
 import StyledLineBreak from "../../components/StyledLineBreak";
 
+const StyledList = styled.li`
+	float: left;
+	list-style: outside outside outside;
+	width: 50%;
+`;
 const TimelineTree = () => {
-	const StyledList = styled.li`
-		float: left;
-		list-style: outside outside outside;
-		width: 50%;
-	`;
 	return (
 		<ul className="timeline-tree">
 			<li className="timeline-event">

@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles.css";
 import styled from "styled-components";
 
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
@@ -12,39 +11,39 @@ import { useMediaQuery } from "react-responsive";
 
 import { Navbar, Container, Nav } from "react-bootstrap";
 
+const FloatingMenu = styled.nav`
+	background: transparent;
+	// border: 2px solid #222;
+	border-radius: 5px;
+	// padding: 5px;
+	width: 110px;
+	height: 250px;
+	z-index: 100;
+	position: fixed;
+	bottom: 10vh;
+	left: 3vw;
+	display: flex;
+	flex-direction: column;
+	font-family: "Raleway";
+	font-size: 0.9em;
+	font-weight: 400;
+`;
+
+const MenuLink = styled.a`
+	// margin: 0 0.5em;
+	// padding: 15px;
+	// background: #c9c9c9;
+	text-align: center;
+	height: 100%;
+	color: white;
+	text-decoration: none;
+	display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+`;
+
 const Navigation = () => {
 	// about, education, experience, skills, projects, contact
-
-	const FloatingMenu = styled.nav`
-		background: transparent;
-		// border: 2px solid #222;
-		border-radius: 5px;
-		// padding: 5px;
-		width: 110px;
-		height: 250px;
-		z-index: 100;
-		position: fixed;
-		bottom: 10vh;
-		left: 3vw;
-		display: flex;
-		flex-direction: column;
-		font-family: "Raleway";
-		font-size: 0.9em;
-		font-weight: 400;
-	`;
-
-	const MenuLink = styled.a`
-		// margin: 0 0.5em;
-		// padding: 15px;
-		// background: #c9c9c9;
-		text-align: center;
-		height: 100%;
-		color: white;
-		text-decoration: none;
-		display: flex;
-		// flex-direction: column;
-		// justify-content: center;
-	`;
 
 	const isMobile = useMediaQuery({ query: `(max-width: 480px)` });
 
