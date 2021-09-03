@@ -18,7 +18,7 @@ const plugins = [
 	new MiniCssExtractPlugin(),
 	new HtmlWebpackPlugin({
 		template: "src/index.html",
-		// favicon: "src/assets/favicon.ico",
+		favicon: "src/favicon.ico",
 	}),
 	new CleanWebpackPlugin(),
 	// new CopyPlugin({
