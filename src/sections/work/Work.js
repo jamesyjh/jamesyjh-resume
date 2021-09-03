@@ -30,8 +30,8 @@ const Work = () => {
 		margin-bottom: 10em;
 
 		@media (max-width: 500px) {
-			margin-left: 10px;
-			margin-right: 10px;
+			margin-left: 22px;
+			margin-right: 22px;
 		}
 	`;
 	return (

@@ -30,8 +30,8 @@ const StyledContent = styled.div`
 	margin-right: auto;
 
 	@media (max-width: 500px) {
-		margin-left: 10px;
-		margin-right: 10px;
+		margin-left: 22px;
+		margin-right: 22px;
 	}
 `;
 
@@ -76,7 +76,7 @@ const Hero = () => {
 					className="mb-4"
 					style={{
 						fontFamily: "Raleway",
-						fontSize: "8vh",
+						fontSize: "7vh",
 						fontWeight: 800,
 						color: "#fff",
 					}}
