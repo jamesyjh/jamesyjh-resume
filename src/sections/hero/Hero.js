@@ -28,6 +28,11 @@ const StyledSection = styled.section`
 const StyledContent = styled.div`
 	margin-left: auto;
 	margin-right: auto;
+
+	@media (max-width: 500px) {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
 `;
 
 const StyledIcon = styled.a`
@@ -98,7 +103,7 @@ const Hero = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<img src={LinkedinIcon} alt="linkedin" className="img-fluid" />
+							<img src={LinkedinIcon} alt="linkedin" />
 						</StyledSocialLink>
 					</StyledMotionButton>
 

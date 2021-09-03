@@ -26,6 +26,13 @@ const About = () => {
 	const StyledContent = styled.div`
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 10em;
+		margin-top: 10em;
+
+		@media (max-width: 500px) {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
 	`;
 
 	const StyledList = styled.li`

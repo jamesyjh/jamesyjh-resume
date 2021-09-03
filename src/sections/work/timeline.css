@@ -2,7 +2,7 @@
 .timeline-tree {
 	margin: 4em auto;
 	position: relative;
-	max-width: 46em;
+	max-width: 800px;
 	list-style: none;
 }
 .timeline-tree:before {
@@ -15,6 +15,7 @@
 	width: 2px;
 	height: 100%;
 }
+
 .timeline-event {
 	position: relative;
 }
@@ -47,17 +48,20 @@
 	width: 80%;
 	font-family: "Raleway";
 }
+
 .timeline-event-copy h3 {
 	font-size: 1.75em;
 	font-weight: 700;
 	color: #c9c9c9;
 }
+
 .timeline-event-copy h4 {
 	font-size: 1.2em;
 	font-weight: 600;
 	margin-bottom: 1.2em;
 	color: #c9c9c9;
 }
+
 .timeline-event-copy strong {
 	font-weight: 700;
 }
@@ -66,7 +70,7 @@
 }
 
 .timeline-event-copy ul > li {
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 	list-style: square;
 }
 
@@ -77,6 +81,7 @@
 .timeline-event-copy p:not(.timeline-event-thumbnail) {
 	padding-bottom: 1.2em;
 }
+
 .timeline-event-icon {
 	/* transform: rotate(45deg); */
 	background-color: black;
@@ -89,6 +94,46 @@
 	width: 1em;
 	height: 1em;
 }
+
+@media (max-width: 500px) {
+	.timeline-tree:before {
+		left: 10px;
+		width: 2px;
+		height: 100%;
+	}
+
+	.timeline-event-copy {
+		padding: 5px;
+		position: relative;
+		top: 0;
+		left: -5px;
+		width: 100%;
+	}
+
+	.timeline-event-copy h3 {
+		font-size: 3vh;
+	}
+
+	.timeline-event-copy h4 {
+		font-size: 2.5vh;
+	}
+
+	.timeline-event-copy ul > li {
+		margin-bottom: 27px;
+	}
+
+	.timeline-event-copy p:not(.timeline-event-thumbnail) {
+		padding-bottom: 1em;
+	}
+
+	.timeline-event-icon {
+		top: 0;
+		left: -31px;
+		width: 1em;
+		height: 1em;
+	}
+}
+
 .timeline-event-thumbnail {
 	transition: box-shadow 500ms ease-in 0.1s;
 	color: white;

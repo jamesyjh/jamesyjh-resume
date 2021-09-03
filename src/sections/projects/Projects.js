@@ -24,6 +24,8 @@ const Projects = () => {
 	const StyledContent = styled.div`
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 10em;
+		margin-bottom: 10em;
 	`;
 	return (
 		<StyledSection

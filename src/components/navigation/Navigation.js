@@ -8,6 +8,10 @@ import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
 import CodeIcon from "@material-ui/icons/Code";
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 
+import { useMediaQuery } from "react-responsive";
+
+import { Navbar, Container, Nav } from "react-bootstrap";
+
 const Navigation = () => {
 	// about, education, experience, skills, projects, contact
 
@@ -42,25 +46,48 @@ const Navigation = () => {
 		// justify-content: center;
 	`;
 
+	const isMobile = useMediaQuery({ query: `(max-width: 480px)` });
+
+	if (!isMobile) {
+		return (
+			<>
+				<FloatingMenu>
+					<MenuLink href="#about" className="active">
+						<AccountCircleIcon />
+						&nbsp;&nbsp;About
+					</MenuLink>
+					<MenuLink href="#work">
+						<WorkOutlineIcon /> &nbsp;&nbsp;Work
+					</MenuLink>
+
+					<MenuLink href="#projects">
+						<CodeIcon /> &nbsp;&nbsp;Projects
+					</MenuLink>
+					<MenuLink href="#contact">
+						<AlternateEmailIcon />
+						&nbsp;&nbsp;Contact
+					</MenuLink>
+				</FloatingMenu>
+			</>
+		);
+	}
+
 	return (
 		<>
-			<FloatingMenu>
-				<MenuLink href="#about" className="active">
-					<AccountCircleIcon />
-					&nbsp;&nbsp;About
-				</MenuLink>
-				<MenuLink href="#work">
-					<WorkOutlineIcon /> &nbsp;&nbsp;Work
-				</MenuLink>
-
-				<MenuLink href="#projects">
-					<CodeIcon /> &nbsp;&nbsp;Projects
-				</MenuLink>
-				<MenuLink href="#contact">
-					<AlternateEmailIcon />
-					&nbsp;&nbsp;Contact
-				</MenuLink>
-			</FloatingMenu>
+			<Navbar bg="dark" expand="lg" fixed="top" variant="dark">
+				<Container>
+					<Navbar.Brand href="#home"></Navbar.Brand>
+					<Navbar.Toggle aria-controls="basic-navbar-nav" />
+					<Navbar.Collapse id="basic-navbar-nav">
+						<Nav className="me-auto">
+							<Nav.Link href="#about">About</Nav.Link>
+							<Nav.Link href="#work">Work</Nav.Link>
+							<Nav.Link href="#projects">Creations</Nav.Link>
+							<Nav.Link href="#contact">Contact Me</Nav.Link>
+						</Nav>
+					</Navbar.Collapse>
+				</Container>
+			</Navbar>
 		</>
 	);
 };
