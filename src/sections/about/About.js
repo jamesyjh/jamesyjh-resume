@@ -27,7 +27,7 @@ const About = () => {
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 10em;
-		margin-top: 10em;
+		margin-bottom: 10em;
 
 		@media (max-width: 500px) {
 			margin-left: 10px;
