@@ -1,6 +1,3 @@
-import React from "react";
-import { getDate } from "../../helpers/dates";
-
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`

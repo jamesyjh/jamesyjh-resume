@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const ImageContainer = styled.div`
+interface ImageContainerProps {
+  img?: string;
+}
+
+export const ImageContainer = styled.div<ImageContainerProps>`
   border: 2px solid #333;
   border-radius: 0.5em;
   background: ${({ img }) => `url(${img})`};
