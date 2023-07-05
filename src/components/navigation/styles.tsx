@@ -8,6 +8,7 @@ const NavbarContainer = styled.div`
   width: 100%;
   z-index: 9999;
   opacity: 0.95;
+  -webkit-tap-highlight-color: transparent;
 `;
 
 export { NavbarContainer };

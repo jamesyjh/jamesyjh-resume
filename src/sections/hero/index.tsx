@@ -126,8 +126,8 @@ const Hero = () => {
       className="flex flex-col justify-center items-center min-h-screen p-0"
     >
       <div className="mx-auto max-w-full sm:max-w-[60vw] lg:max-w-[40vw] px-4">
-        <StyledIntro className="mb-8 text-left font-thin">
-          <span className="text-3xl">
+        <StyledIntro className="mb-8 ml-2 text-left font-thin">
+          <span className="text-2xl">
             {intro}
             {!isTypingDone && <Cursor />}
           </span>
@@ -137,7 +137,7 @@ const Hero = () => {
             hidden: { opacity: 0, y: -20 },
             visible,
           }}
-          className="text-6xl sm:text-7xl mb-5 pb-5 leading-none font-extrabold"
+          className="text-5xl text-center sm:text-7xl mb-5 pb-5 leading-none font-extrabold"
         >
           James&nbsp;Hong
         </StyledName>
@@ -148,7 +148,7 @@ const Hero = () => {
               hidden: { opacity: 0, y: 10 },
               visible,
             }}
-            className="mt-2 text-md md:text-lg mb-4 font-light text-center"
+            className="mt-2 text-sm md:text-lg mb-4 font-light text-center"
           >
             Software Engineer&nbsp;
             <span

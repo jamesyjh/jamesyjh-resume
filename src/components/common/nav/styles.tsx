@@ -13,11 +13,15 @@ const NavButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  cursor: pointer;
   background-image: linear-gradient(315deg, #0b0b0b64 5%, var(--color-primary-dark) 95%);
   width: 100%;
 
-  > h3 {
+  > div {
+    cursor: pointer;
+  }
+
+  > div > h3 {
+    display: flex;
     align-items: center;
     text-transform: uppercase;
     letter-spacing: 4px;
