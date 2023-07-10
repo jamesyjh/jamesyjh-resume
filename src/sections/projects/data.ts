@@ -12,7 +12,7 @@ export const projects = {
     icon: memoizeIcon,
     repoUrl: "https://github.com/jamesyjh/todo-memos-vite",
     demoUrl: "https://todo-memos-vite.vercel.app",
-    badges: ["React", "TypeScript", "Vite", "CSS"],
+    badges: ["React", "Redux", "TypeScript", "Vite", "CSS", "Tailwind"],
   },
   talkbox: {
     title: "Talkbox",

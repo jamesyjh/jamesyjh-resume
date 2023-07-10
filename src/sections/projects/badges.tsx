@@ -9,7 +9,7 @@ const Badges = ({ badges }: BadgesProps) => {
     <BadgesContainer className="flex flex-wrap gap-4">
       {badges.length > 0 &&
         badges.map((element) => {
-          return <Badge name={element} />;
+          return <Badge key={element} name={element} />;
         })}
     </BadgesContainer>
   );
