@@ -11,6 +11,7 @@ const HeroContainer = styled(motion.section)`
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 `;
 
 const typing = keyframes`

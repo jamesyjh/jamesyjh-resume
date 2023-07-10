@@ -27,11 +27,11 @@ const WorkDetails = ({ selected }: WorkDetailProps) => {
 
   return (
     <WorkDetailsContainer className="w-full h-full overflow-auto">
-      <h2 className="text-md sm:text-xl font-semibold mt-3 pt-3">
+      <h2 className="pt-3 mt-3 font-semibold text-md sm:text-xl">
         {title}&nbsp;
         <span onClick={() => navigateToExternalLink(companyUrl)}>@{company}</span>
       </h2>
-      <span className="text-sm sm:text-md font-normal">{dates}</span>
+      <span className="text-sm font-normal sm:text-md">{dates}</span>
       <hr className="mt-3" />
       <DetailsList details={details} />
       <WorkBadges badges={badges} />
@@ -46,7 +46,7 @@ const WorkBadges = ({ badges }: BadgesProps) => {
     <div className="flex flex-wrap gap-4">
       {badges.length > 0 &&
         badges.map((element) => {
-          return <Badge name={element} />;
+          return <Badge key={element} name={element} />;
         })}
     </div>
   );
@@ -56,7 +56,7 @@ const DetailsList = ({ details }: BulletProps) => (
   <BulletListContainer className="py-3 my-2">
     {details.length > 0 &&
       details.map((content) => {
-        return <ListItem content={content} />;
+        return <ListItem key={content} content={content} />;
       })}
   </BulletListContainer>
 );

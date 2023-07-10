@@ -1,7 +1,7 @@
 import memoizePreview from "../../assets/projects/memoize/preview1.png";
 import memoizeIcon from "../../assets/projects/memoize/memoize-icon.ico";
 
-import talkboxPreview from "../../assets/projects/talkbox/preview.png";
+import talkboxPreview from "../../assets/projects/talkbox/preview2.png";
 
 export const projects = {
   memoize: {
@@ -12,7 +12,7 @@ export const projects = {
     icon: memoizeIcon,
     repoUrl: "https://github.com/jamesyjh/todo-memos-vite",
     demoUrl: "https://todo-memos-vite.vercel.app",
-    badges: ["React", "TypeScript", "Vite", "CSS"],
+    badges: ["React", "Redux", "TypeScript", "Vite", "CSS", "Tailwind"],
   },
   talkbox: {
     title: "Talkbox",

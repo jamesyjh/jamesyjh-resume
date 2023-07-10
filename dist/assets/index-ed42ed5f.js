@@ -220,7 +220,7 @@ Valid keys: `+JSON.stringify(Object.keys(j),null,"  "));var xe=F(B,ne,Z,H,J+"."+
   > div {
     transition: all 100ms ease-in;
   }
-`,TC=({children:e})=>{const{isMenuOpen:t}=_.useContext(Ui);return P.jsxs(PC,{children:[P.jsx(CC,{}),P.jsx("div",{className:`content-wrapper ${t?"blur-md":""}`,children:e})]})},EC="/assets/toronto-922ff0eb.jpg",AC=ue.h1`
+`,TC=({children:e})=>{const{isMenuOpen:t}=_.useContext(Ui);return _.useEffect(()=>{t?document.documentElement.classList.add("overflow-hidden"):document.documentElement.classList.remove("overflow-hidden")},[t]),P.jsxs(PC,{children:[P.jsx(CC,{}),P.jsx("div",{className:`content-wrapper ${t?"blur-md":""}`,children:e})]})},EC="/assets/toronto-922ff0eb.jpg",AC=ue.h1`
   position: relative;
 
   &:before {
@@ -247,6 +247,7 @@ Valid keys: `+JSON.stringify(Object.keys(j),null,"  "));var xe=F(B,ne,Z,H,J+"."+
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 `,RC=lC`
   0% {
     opacity: 0;
@@ -398,7 +399,7 @@ Valid keys: `+JSON.stringify(Object.keys(j),null,"  "));var xe=F(B,ne,Z,H,J+"."+
   background-size: cover;
 `,oP=ue.div`
   position: relative;
-`,sP=()=>{const[e,t]=_.useState("scotia-digital"),n=r=>{t(r)};return P.jsx(iP,{className:"flex flex-col justify-center items-center p-0 overflow-hidden",id:"work",children:P.jsxs(oP,{className:"mx-auto max-w-full sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[48vw] px-4",children:[P.jsx(zc,{showDivider:!0,title:"Where I've Worked"}),P.jsxs("div",{className:"flex flex-col sm:flex-row mt-2 sm:mt-8",children:[P.jsx("div",{className:"my-2 mr-5 max-w-max text-center",children:P.jsx("ul",{className:"p-0.5 flex flex-row sm:flex-col gap-4",children:Object.keys(Xa).map(r=>P.jsx("li",{className:"p-2 bg-primary transition-all duration-200 ease-out rounded-md hover:bg-secondary cursor-pointer",onClick:()=>n(r),style:{backgroundColor:r===e?"var(--palette-5-4)":"inherit"},children:P.jsx("span",{className:"text-gray-300 overflow-hidden px-2 h-4 text-xs tracking-wide font-medium no-underline cursor-pointer",children:Xa[r].company})},r))})}),P.jsx(tP,{selected:Xa[e]})]})]})})},aP="/assets/preview1-e76be06e.png",lP="/assets/memoize-icon-0f17029e.ico",uP="/assets/preview-6fcda504.png",Za={memoize:{title:"Memoize",link:"#memoize",desc:"Memoize is a web app to organize your tasks and reminders. Create, label, drag-and-drop your todos to your liking.",img:aP,icon:lP,repoUrl:"https://github.com/jamesyjh/todo-memos-vite",demoUrl:"https://todo-memos-vite.vercel.app",badges:["React","TypeScript","Vite","CSS"]},talkbox:{title:"Talkbox",link:"#talkbox",icon:null,desc:"Full stack Slack clone with full functioning chat features. Authenticated via Auth0 API.",img:uP,repoUrl:"https://github.com/jamesyjh/talkbox-client",badges:["React","Redux","Typescript","Vite","CSS","WebSocket","Express.js","Node.js","Auth0","MongoDB","Nx / Lerna"]}},cP=ue.div`
+`,sP=()=>{const[e,t]=_.useState("scotia-digital"),n=r=>{t(r)};return P.jsx(iP,{className:"flex flex-col justify-center items-center p-0 overflow-hidden",id:"work",children:P.jsxs(oP,{className:"mx-auto max-w-full sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[48vw] px-4",children:[P.jsx(zc,{showDivider:!0,title:"Where I've Worked"}),P.jsxs("div",{className:"flex flex-col sm:flex-row mt-2 sm:mt-8",children:[P.jsx("div",{className:"my-2 mr-5 max-w-max text-center",children:P.jsx("ul",{className:"p-0.5 flex flex-row sm:flex-col gap-4",children:Object.keys(Xa).map(r=>P.jsx("li",{className:"p-2 bg-primary transition-all duration-200 ease-out rounded-md hover:bg-secondary cursor-pointer",onClick:()=>n(r),style:{backgroundColor:r===e?"var(--palette-5-4)":"inherit"},children:P.jsx("span",{className:"text-gray-300 overflow-hidden px-2 h-4 text-xs tracking-wide font-medium no-underline cursor-pointer",children:Xa[r].company})},r))})}),P.jsx(tP,{selected:Xa[e]})]})]})})},aP="/assets/preview1-e76be06e.png",lP="/assets/memoize-icon-0f17029e.ico",uP="/assets/preview2-190ab320.png",Za={memoize:{title:"Memoize",link:"#memoize",desc:"Memoize is a web app to organize your tasks and reminders. Create, label, drag-and-drop your todos to your liking.",img:aP,icon:lP,repoUrl:"https://github.com/jamesyjh/todo-memos-vite",demoUrl:"https://todo-memos-vite.vercel.app",badges:["React","TypeScript","Vite","CSS"]},talkbox:{title:"Talkbox",link:"#talkbox",icon:null,desc:"Full stack Slack clone with full functioning chat features. Authenticated via Auth0 API.",img:uP,repoUrl:"https://github.com/jamesyjh/talkbox-client",badges:["React","Redux","Typescript","Vite","CSS","WebSocket","Express.js","Node.js","Auth0","MongoDB","Nx / Lerna"]}},cP=ue.div`
   border: 2px solid #333;
   border-radius: 0.5em;
   background: ${({img:e})=>`url(${e})`};
@@ -452,9 +453,4 @@ Valid keys: `+JSON.stringify(Object.keys(j),null,"  "));var xe=F(B,ne,Z,H,J+"."+
 `,SP=()=>{const{activeProject:e,setActiveProject:t}=_.useContext(Ui),n=r=>{t(r)};return P.jsx(xP,{className:"flex flex-col justify-center items-center p-0 overflow-hidden",id:"projects",children:P.jsxs(wP,{className:"mx-auto max-w-full sm:min-w-[40vw] lg:max-w-[48vw] px-4",children:[P.jsx(zc,{showDivider:!0,title:"Things I've Built"}),P.jsxs("div",{className:"flex flex-col-reverse sm:flex-row mt-2 sm:mt-8",children:[P.jsx(vP,{activeProject:Za[e]}),P.jsx("div",{className:"my-2 ml-0 sm:ml-5 max-w-max text-center",children:P.jsx("ul",{className:"p-0.5 flex flex-row sm:flex-col gap-4",children:Object.keys(Za).map(r=>P.jsx("li",{id:r,className:"p-2 bg-primary transition-all duration-200 ease-out rounded-md hover:bg-secondary cursor-pointer",onClick:()=>n(r),style:{backgroundColor:r===e?"var(--palette-5-4)":"inherit"},children:P.jsx("span",{className:"text-gray-300 overflow-hidden px-2 h-4 text-xs tracking-wide font-medium no-underline cursor-pointer",children:Za[r].title})},r))})})]})]})})},kP=ue.footer`
   text-align: center;
   background-image: linear-gradient(315deg, #0b0b0b64 5%, var(--color-primary-dark) 95%);
-`,CP=ue.span`
-  color: #fff;
-  font-size: 1.25vh;
-  line-height: 40px;
-  font-family: "Raleway";
-`,PP=()=>P.jsx(kP,{children:P.jsx(CP,{children:"Built with Vite, Tailwind CSS + Styled Components. Designed and coded by James Hong - 2023"})}),TP=()=>P.jsx(TC,{children:P.jsxs(L2,{mode:"wait",children:[P.jsx(NC,{}),P.jsx(KC,{}),P.jsx(sP,{}),P.jsx(SP,{}),P.jsx(PP,{})]})});Ja.createRoot(document.getElementById("root")).render(P.jsx(Xe.StrictMode,{children:P.jsx(E1,{children:P.jsx(q2,{children:P.jsx(TP,{})})})}));
+`,CP=()=>P.jsx(kP,{children:P.jsx("span",{className:"text-xs font-light",children:"2023. Designed and built with Vite, Tailwind CSS + Styled Components"})}),PP=()=>P.jsx(TC,{children:P.jsxs(L2,{mode:"wait",children:[P.jsx(NC,{}),P.jsx(KC,{}),P.jsx(sP,{}),P.jsx(SP,{}),P.jsx(CP,{})]})});Ja.createRoot(document.getElementById("root")).render(P.jsx(Xe.StrictMode,{children:P.jsx(E1,{children:P.jsx(q2,{children:P.jsx(PP,{})})})}));

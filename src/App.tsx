@@ -10,15 +10,15 @@ import Footer from "./sections/footer";
 
 const App = () => {
   return (
-    <Layout>
-      <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait">
+      <Layout>
         <Hero />
         <About />
         <Work />
         <Projects />
         <Footer />
-      </AnimatePresence>
-    </Layout>
+      </Layout>
+    </AnimatePresence>
   );
 };
 
