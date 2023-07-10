@@ -1,7 +1,7 @@
 import memoizePreview from "../../assets/projects/memoize/preview1.png";
 import memoizeIcon from "../../assets/projects/memoize/memoize-icon.ico";
 
-import talkboxPreview from "../../assets/projects/talkbox/preview.png";
+import talkboxPreview from "../../assets/projects/talkbox/preview2.png";
 
 export const projects = {
   memoize: {

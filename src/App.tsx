@@ -9,6 +9,7 @@ import Projects from "./sections/projects";
 import Footer from "./sections/footer";
 
 const App = () => {
+	
   return (
     <Layout>
       <AnimatePresence mode="wait">
