@@ -9,7 +9,6 @@ import { navigateToExternalLink } from "../../helpers/navigation";
 const HeroContainer = styled(motion.section)`
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(${bgImage});
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
 `;
@@ -124,10 +123,10 @@ const Hero = () => {
       animate="visible"
       exit={{ opacity: 0, transition: { duration: 0.75 } }}
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
-      className="flex flex-col justify-center items-center min-h-screen p-0"
+      className="flex flex-col items-center justify-center min-h-screen p-0 bg-scroll sm:bg-fixed"
     >
       <div className="mx-auto max-w-full sm:max-w-[60vw] lg:max-w-[40vw] px-4">
-        <StyledIntro className="mb-8 ml-2 text-left font-thin">
+        <StyledIntro className="mb-8 ml-2 font-thin text-left">
           <span className="text-2xl">
             {intro}
             {!isTypingDone && <Cursor />}
@@ -138,18 +137,18 @@ const Hero = () => {
             hidden: { opacity: 0, y: -20 },
             visible,
           }}
-          className="text-5xl text-center sm:text-7xl mb-5 pb-5 leading-none font-extrabold"
+          className="pb-5 mb-5 text-5xl font-extrabold leading-none text-center sm:text-7xl"
         >
           James&nbsp;Hong
         </StyledName>
-        <div className="mt-2 pt-2">
+        <div className="pt-2 mt-2">
           <StyledLineBreak />
           <StyledDesc
             variants={{
               hidden: { opacity: 0, y: 10 },
               visible,
             }}
-            className="mt-2 text-sm md:text-lg mb-4 font-light text-center"
+            className="mt-2 mb-4 text-sm font-light text-center md:text-lg"
           >
             Software Engineer&nbsp;
             <span
@@ -160,7 +159,7 @@ const Hero = () => {
             </span>
           </StyledDesc>
         </div>
-        <div className="mt-5 pt-5">
+        <div className="pt-5 mt-5">
           <SocialBar />
         </div>
       </div>
