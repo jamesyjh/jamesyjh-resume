@@ -10,6 +10,7 @@ import downloadAnimation from "../../../animations/lottie/download.json";
 import BasicButton from "../button/basic-button";
 import { useContext } from "react";
 import { AppContext } from "../../../context/AppContext";
+import { gaEvents } from "../../../analytics";
 
 interface NavMenuProps {
   isMenuOpen: boolean;
@@ -28,7 +29,10 @@ const NavMenu = ({ isMenuOpen, setMenuOpen }: NavMenuProps) => {
     setMenuOpen(false);
   };
 
-  const handleResumeDownload = () => window.open("./resume.pdf", "_blank");
+  const handleResumeDownload = () => {
+    gaEvents.eventDownloadResume();
+    window.open("./resume.pdf", "_blank");
+  };
 
   const staggerMenuItems = stagger(0.1, { startDelay: 0.2 });
 
@@ -92,7 +96,7 @@ const NavMenu = ({ isMenuOpen, setMenuOpen }: NavMenuProps) => {
           </NavMenuItem>
         </div>
 
-        <NavMenuItem initial={false} animate={isMenuOpen ? slideInLeft : slideOutLeft}>
+        <NavMenuItem id="download-resume" initial={false} animate={isMenuOpen ? slideInLeft : slideOutLeft}>
           <BasicButton onClick={() => handleResumeDownload()}>
             <AiOutlineDownload size={16} />
             <span>Download Resume</span>
@@ -100,7 +104,7 @@ const NavMenu = ({ isMenuOpen, setMenuOpen }: NavMenuProps) => {
         </NavMenuItem>
 
         <hr className="border-[#ffffff40]" />
-        <div className="social-bar flex justify-center">
+        <div className="flex justify-center social-bar">
           <SocialBar />
         </div>
       </div>
