@@ -7,6 +7,9 @@ import About from "./sections/about";
 import Work from "./sections/work";
 import Projects from "./sections/projects";
 import Footer from "./sections/footer";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-MZ9KSGS7Y3");
 
 const App = () => {
   return (
