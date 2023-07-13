@@ -3,7 +3,6 @@ import { LuGithub } from "react-icons/lu";
 import { IoMdOpen } from "react-icons/io";
 import { LinksContainer } from "./styles";
 import BasicButton from "../../components/common/button/basic-button";
-import { useNavigate } from "react-router-dom";
 import { navigateToExternalLink } from "../../helpers/navigation";
 
 interface LinksProps {
