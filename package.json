@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && cp CNAME ./dist && cp resume.pdf ./dist",
     "serve": "vite preview",
-    "build:prod": "webpack --mode production --env production",
     "clean": "rmdir /Q /S dist",
     "deploy": "gh-pages -d dist"
   },
