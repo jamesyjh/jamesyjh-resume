@@ -35,10 +35,11 @@ const StyledButton = styled.button`
 interface BasicButtonProps {
   children: React.ReactNode;
   onClick: () => void;
+  id?: string;
 }
 
 const BasicButton = (props: BasicButtonProps) => (
-  <StyledButton onClick={props.onClick} className="flex gap-1 px-3 py-2 text-white text-xs font-normal">
+  <StyledButton id={props.id} onClick={props.onClick} className="flex gap-1 px-3 py-2 text-xs font-normal text-white">
     {props.children}
   </StyledButton>
 );

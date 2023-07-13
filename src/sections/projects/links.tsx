@@ -8,9 +8,10 @@ import { navigateToExternalLink } from "../../helpers/navigation";
 interface LinksProps {
   github?: string;
   demo?: string;
+  title: string;
 }
 
-const Links = ({ github, demo }: LinksProps) => {
+const Links = ({ github, demo, title }: LinksProps) => {
   return (
     <LinksContainer>
       {github && (
@@ -21,7 +22,7 @@ const Links = ({ github, demo }: LinksProps) => {
       )}
 
       {demo && (
-        <BasicButton onClick={() => navigateToExternalLink(demo)}>
+        <BasicButton id={`project-${title}`} onClick={() => navigateToExternalLink(demo)}>
           <IoMdOpen size={16} />
           <span>Demo</span>
         </BasicButton>
