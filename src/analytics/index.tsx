@@ -1,18 +1,14 @@
-import ReactGA from "react-ga4";
+import gtag from "ga-gtag";
 
-const clickedDownloadResume = (): void =>
-  ReactGA.event({
-    action: "download resume",
-    category: "navigation",
-    label: "view resume",
-  });
+const clickedDownloadResume = (): void => {
+  gtag("event", "download_resume");
+};
 
-const navigatedToExternalPage = (dest: string): void =>
-  ReactGA.event({
-    action: "navigated to ext page",
-    category: "navigation",
-    label: dest,
+const navigatedToExternalPage = (destination: string): void => {
+  gtag("event", "external_navigation", {
+    destination,
   });
+};
 
 const gaEvents = {
   eventDownloadResume: clickedDownloadResume,

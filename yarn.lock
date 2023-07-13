@@ -594,6 +594,11 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@types/gtag.js@^0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@types/gtag.js/-/gtag.js-0.0.12.tgz#095122edca896689bdfcdd73b057e23064d23572"
+  integrity sha512-YQV9bUsemkzG81Ea295/nF/5GijnD2Af7QhEofh7xu+kvCN6RdodgNwwGWXB5GMI3NoyvQo0odNctoH/qLMIpg==
+
 "@types/history@^4.7.11":
   version "4.7.11"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.11.tgz#56588b17ae8f50c53983a524fc3cc47437969d64"
@@ -1449,6 +1454,11 @@ function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
+
+ga-gtag@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/ga-gtag/-/ga-gtag-1.1.7.tgz#dfaeb77fda9ade34a7b8eb906c0cde8c96f79fb5"
+  integrity sha512-fT/D87hhuNIAmEB2z9mxz88gMFYc1olpX/fETHidZ51sYJ4y6OFch8HZ0DoNWPGFw1BCHB0fqt68dUWvd8kM1Q==
 
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
