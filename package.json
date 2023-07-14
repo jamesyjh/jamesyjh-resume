@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build && cp CNAME ./dist && cp resume.pdf ./dist",
+    "build": "tsc && vite build && yarn run package",
+    "package": "cp CNAME ./dist && cp resume.pdf ./dist && cp ./src/favicon.ico ./dist",
     "serve": "vite preview",
     "clean": "rmdir /Q /S dist",
     "deploy": "gh-pages -d dist"
