@@ -10,6 +10,7 @@ import downloadAnimation from "../../../animations/lottie/download.json";
 import BasicButton from "../button/basic-button";
 import { useContext } from "react";
 import { AppContext } from "../../../context/AppContext";
+import { gaEvents } from "../../../analytics";
 interface NavMenuProps {
   isMenuOpen: boolean;
   setMenuOpen: (isMenuOpen: boolean) => void;
@@ -27,7 +28,10 @@ const NavMenu = ({ isMenuOpen, setMenuOpen }: NavMenuProps) => {
     setMenuOpen(false);
   };
 
-  const handleResumeDownload = () => window.open("./resume.pdf", "_blank");
+  const handleResumeDownload = () => {
+    gaEvents.eventDownloadResume();
+    window.open("./resume.pdf", "_blank");
+  };
   const staggerMenuItems = stagger(0.1, { startDelay: 0.2 });
 
   const scope = useAnimation(isMenuOpen, [

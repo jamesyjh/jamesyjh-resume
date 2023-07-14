@@ -1,4 +1,9 @@
-const navigateToExternalLink = (destination: string): Window | null => window.open(destination, "_blank");
+import { gaEvents } from "../../analytics";
+
+const navigateToExternalLink = (destination: string): any => {
+  gaEvents.eventExternalNavigation(destination);
+  window.open(destination, "_blank");
+};
 
 const navigateToEmailLink = (emailLink: string): string => (window.location.href = emailLink);
 
