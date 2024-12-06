@@ -13,7 +13,7 @@ const NavButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-image: linear-gradient(315deg, #0b0b0b64 5%, var(--color-primary-dark) 95%);
+  background-image: linear-gradient(300deg, #0b0b0b64 5%, var(--color-primary-dark) 14%);
   width: 100%;
 
   > div {
@@ -61,7 +61,7 @@ const NavMenuButton = styled.button<MenuButtonProps>`
 const StyledNavMenu = styled.nav<MenuProps>`
   visibility: ${({ isMenuOpen }) => (isMenuOpen ? "visible" : "hidden")};
   opacity: ${({ isMenuOpen }) => (isMenuOpen ? 1 : 0)};
-  background-image: linear-gradient(315deg, #0b0b0be2 20%, var(--color-primary-dark) 90%);
+  background-image: linear-gradient(285deg, #0b0b0b28 5%, var(--color-primary-dark) 60%);
   z-index: 999;
 `;
 

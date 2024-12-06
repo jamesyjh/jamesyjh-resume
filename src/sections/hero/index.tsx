@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
-import bgImage from "../../assets/images/toronto.jpg";
+import bgImage from "../../assets/images/mountains.jpg";
 import SocialBar from "../../components/common/social-bar";
 import StyledLineBreak from "../../components/StyledLineBreak";
 import { navigateToExternalLink } from "../../helpers/navigation";
 
 const HeroContainer = styled(motion.section)`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(${bgImage});
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(${bgImage});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 `;
 
 const typing = keyframes`

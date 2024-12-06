@@ -3,17 +3,17 @@ import SectionHeader from "../../components/common/section-header";
 import styled from "styled-components";
 import { data } from "./data";
 import WorkDetails from "./details";
+import bgImage from "../../assets/images/mountains.jpg";
 
 type WorkExpKey = keyof typeof data;
 
 const WorkContainer = styled.section`
   padding: 12vh 0;
-
-  background-color: var(--palette-1-1);
-  background-image: linear-gradient(315deg, #0b0b0b 20%, var(--color-primary-dark) 90%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.8)), url(${bgImage});
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 `;
 
 const ContentWrapper = styled.div`
@@ -27,21 +27,21 @@ const Work = () => {
     setSelected(workKey);
   };
   return (
-    <WorkContainer className="flex flex-col justify-center items-center p-0 overflow-hidden" id="work">
+    <WorkContainer className="flex flex-col items-center justify-center p-0 overflow-hidden" id="work">
       <ContentWrapper className="mx-auto max-w-full sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[48vw] px-4">
         <SectionHeader showDivider title="Where I've Worked" />
-        <div className="flex flex-col sm:flex-row mt-2 sm:mt-8">
-          <div className="my-2 mr-5 max-w-max text-center">
+        <div className="flex flex-col mt-2 sm:flex-row sm:mt-8">
+          <div className="my-2 mr-5 text-center max-w-max">
             <ul className="p-0.5 flex flex-row sm:flex-col gap-4">
               {Object.keys(data).map((key) => {
                 return (
                   <li
-                    className="p-2 bg-primary transition-all duration-200 ease-out rounded-md hover:bg-secondary cursor-pointer"
+                    className="p-2 transition-all duration-200 ease-out rounded-md cursor-pointer bg-primary hover:bg-secondary"
                     key={key}
                     onClick={() => handleClick(key as WorkExpKey)}
-                    style={{ backgroundColor: key === selected ? "var(--palette-5-4)" : "inherit" }}
+                    style={{ backgroundColor: key === selected ? "var(--palette-6-2)" : "inherit" }}
                   >
-                    <span className="text-gray-300 overflow-hidden px-2 h-4 text-xs tracking-wide font-medium no-underline cursor-pointer">
+                    <span className="h-4 px-2 overflow-hidden text-xs font-medium tracking-wide text-gray-300 no-underline cursor-pointer">
                       {data[key as WorkExpKey].company}
                     </span>
                   </li>
@@ -49,7 +49,13 @@ const Work = () => {
               })}
             </ul>
           </div>
-          <WorkDetails selected={data[selected as WorkExpKey]} />
+          <WorkDetails
+            key={selected}
+            selected={data[selected as WorkExpKey].roles}
+            company={data[selected as WorkExpKey].company}
+            companyUrl={data[selected as WorkExpKey].companyUrl}
+            badges={data[selected as WorkExpKey].badges}
+          />
         </div>
       </ContentWrapper>
     </WorkContainer>

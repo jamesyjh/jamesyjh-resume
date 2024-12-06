@@ -10,8 +10,11 @@ const StyledHeader = styled.h1<StyledHeaderProps>`
   margin: 0;
   padding-bottom: 0.5em;
   margin-bottom: 0.75em;
-  font-family: "Just Another Hand", cursive;
-  letter-spacing: 3px;
+  /* font-family: "Just Another Hand", cursive; */
+  font-family: "Lato";
+  font-weight: 500;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
 
   &:before {
     display: ${({ showDivider }) => (showDivider ? "block" : "none")};

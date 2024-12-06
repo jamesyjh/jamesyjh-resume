@@ -6,9 +6,9 @@ interface ImageContainerProps {
 }
 
 export const ImageContainer = styled.div<ImageContainerProps>`
-  border: 2px solid #333;
+  border: 2px solid #222;
   border-radius: 0.5em;
-  background: ${({ img }) => `url(${img})`};
+  background: ${({ img }) => `linear-gradient(rgba(190, 191, 255, 0.096), rgba(0, 0, 0, 0.7)), url(${img})`};
   background-size: cover;
   background-repeat: no-repeat;
 `;
